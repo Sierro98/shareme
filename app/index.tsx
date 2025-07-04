@@ -1,15 +1,18 @@
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
+import { useColorScheme } from "nativewind";
 
 export default function Index() {
+  const { colorScheme, toggleColorScheme } = useColorScheme();
+
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="text-3xl text-purple-600 font-bold">Home</Text>
+    <View className="flex-1 justify-center items-center bg-bgPrimary dark:bg-dark-bgPrimary">
+      <Text className="text-3xl text-tBase dark:text-dark-tBase font-bold">Home</Text>
+      <View className="mt-4">
+        <Button
+          title={`Switch to ${colorScheme === 'light' ? 'Dark' : 'Light'} Mode`}
+          onPress={toggleColorScheme}
+        />
+      </View>
     </View>
   );
 }
