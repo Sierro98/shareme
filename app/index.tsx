@@ -1,6 +1,9 @@
 import { useRouter } from "expo-router";
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+import AppleLogo from "../assets/images/apple_logo.svg";
+import GoogleLogo from "../assets/images/google_logo.svg";
 import ShareMeLogo from "../assets/images/shareME_logo.svg";
+
 
 export default function Index() {
   const router = useRouter();
@@ -9,7 +12,7 @@ export default function Index() {
     <SafeAreaView className="flex-1 bg-bgPrimary">
       <View className="flex-1 items-center justify-around p-10">
         <View className="mt-10">
-          <ShareMeLogo width={200} height={50} />
+          <ShareMeLogo className="w-[50%] h-[50%]" />
         </View>
         <Image
           source={require("../assets/images/sharing_intro.png")}
@@ -35,8 +38,12 @@ export default function Index() {
 
           {/* Social Logins */}
           <View className="flex-row justify-center items-center mt-10">
-            <Text className="text-4xl mx-6"></Text>
-            <Text className="text-4xl mx-6">G</Text>
+            <View className="mx-5">
+              <AppleLogo className="w-[50%] h-[50%]" />
+            </View>
+            <View className="mx-5">
+              <GoogleLogo className="w-[50%] h-[50%]" />
+            </View>
           </View>
         </View>
       </View>
