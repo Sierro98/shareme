@@ -11,6 +11,8 @@ module.exports = {
         tertiary: '#F9F871',
         bgPrimary: '#B5D8DB',
         tBase: '#324B4D',
+        accent: '#25D3D8',
+        white: '#FFFFFF',
         dark: {
           bgPrimary: '#324B4D',
           tBase: '#EBFDFE',
